@@ -10,7 +10,7 @@ export function createHtml(collectionItems, name){
     collectionItems.forEach((value) =>{
         generatedHtml += `
             <div class="item" data-js-item="${value.name}">
-                <div class="latest-image img" style="padding: 0; overflow: hidden; border-radius: 8px;">
+                <div class="latest-image img">
                     <img src="${value.img}">
                 </div>
                 <div class="name">
@@ -85,6 +85,7 @@ document.querySelectorAll(`.item`)
             // divData here is name of product in cart
         })
     })
+
 
 
 

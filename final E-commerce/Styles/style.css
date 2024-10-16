@@ -221,10 +221,10 @@ body{
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
 }
-.latest img:hover{
+/* .latest img:hover{
     transform: scale(1.1);
     border-radius: 8px;
-}
+} */
 
 /* This is Aniket */
 
@@ -253,19 +253,26 @@ body{
     display: grid;
     grid-template-columns: 250px 250px 250px 250px;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(214px, 1fr));
     padding: 0px 50px;
     column-gap: 30px;
     row-gap: 30px;
 }
 .latest-collections-grid-container .item{
-    box-shadow: 0px 0px 15px #5d7076e8;
+    box-shadow: 0px 0px 15px #13333ee8;
+    border-radius: 6px;
     cursor: pointer;
-    background-color: #c0c0c0;
-    background-color: #abb2ba; /*edited*/
-    box-shadow: 0px 0px 15px #13333ee8; /*edited*/
-    padding: 25px;
-    font-size: 20px;
+    background-color: #abb2ba;
+    padding: 18px; /* Padding for the item */
+    font-size: 20px; /* Keep original font size */
     font-family: 'Times New Roman', Times, serif;
+    display: flex; /* Aligning content inside the item */
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align content to the left */
+    text-align: left; /* Align text to the left */
+    transition: transform 0.3s ease; /* Transition for hover effect */
+    overflow: hidden; /* Prevent overflow */
+    /* height: 450px; Increased height for .item */
     /* box-shadow: 0px 0px 20px rgba(0, 0, 0, .3); */
 }
 .latest-collections-grid-container .item .name{
@@ -273,18 +280,27 @@ body{
     margin: 0px 8px 0px 8px;
 }
 .latest-collections-grid-container .img{
-    width: 200px;
-    height: 236px;
+    /* width: 200px;
+    height: 236px; */
+    width: 100%; /* Full width */
+    height:284px; /* Increased height for the image */
     display: flex;
-    justify-content: center;
-    margin-bottom: 14px;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    margin-bottom: 10px; /* Spacing below the image */
     border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+
 }
 .latest-collections-grid-container .img img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease;
     /* height: 175px; */
+}
+.latest-collections-grid-container .img img:hover{
+    transform: scale(1.05);
 }
 .latest-collections-grid-container .item .rating{
     display: flex;
@@ -329,4 +345,31 @@ body{
 }
 .add-to-cart-button:hover{
     opacity: .6;
+}
+
+
+@media (max-width: 880px){
+    .latest-collections-grid-container{
+        padding: 0px 18px;
+    }
+}
+@media (max-width: 780px){
+    .latest-collections-grid-container{
+        column-gap: 21px;
+    }
+}
+@media (max-width: 740px){
+    .latest-collections-grid-container{
+        column-gap: 21px;
+        padding: 0px 50px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .latest-collections-grid-container .item{
+        padding: 22px;
+    }
+}
+@media (max-width: 630px){
+    .latest-collections-grid-container{
+        padding: 0px 20px;
+    }
 }

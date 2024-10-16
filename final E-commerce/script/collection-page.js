@@ -189,6 +189,7 @@ menuIcon.addEventListener(('click'), () =>{
     }
 })
 
+
 window.addEventListener('resize', () =>{
     if (window.innerWidth > 992){
         filter.style.left = '0px';

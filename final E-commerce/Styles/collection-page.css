@@ -85,7 +85,7 @@ a:hover {
     display: flex;
     align-items: center;
     /* justify-content: space-evenly; */
-    padding-top: 50px;
+    padding-top: 10px;
     flex-direction: column;
     box-sizing: border-box;
     position: fixed;
@@ -94,7 +94,7 @@ a:hover {
     bottom: 0px;
 }
 .filters p{
-    margin-bottom: 35px;
+    margin-bottom: 15px;
 }
 
 .menu-icon-container{
@@ -123,7 +123,7 @@ a:hover {
     padding-left: 22px;
     padding-right: 22px;
     padding-bottom: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 35px;
 }
 .category h5,
 .type h5{
@@ -161,14 +161,13 @@ a:hover {
     color: gray;
 }
 
-/* Grid container for items */
 .items-grid-container {
     background-color: #d2d8de;
     padding-bottom: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(237px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(237px, 1fr));
     row-gap: 30px;
-    column-gap: 40px; /* Initial column gap */
+    column-gap: 40px
 }
 
 .items-grid-container .item {
@@ -176,41 +175,42 @@ a:hover {
     border-radius: 6px;
     cursor: pointer;
     background-color: #abb2ba;
-    padding: 18px; /* Padding for the item */
-    font-size: 20px; /* Keep original font size */
+    padding: 18px;
+    font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
-    display: flex; /* Aligning content inside the item */
-    flex-direction: column; /* Stack content vertically */
-    align-items: flex-start; /* Align content to the left */
-    text-align: left; /* Align text to the left */
-    transition: transform 0.3s ease; /* Transition for hover effect */
-    overflow: hidden; /* Prevent overflow */
-    height: 450px; /* Increased height for .item */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    height: 450px;
 }
 
 .items-grid-container .item img:hover {
-    transform: scale(1.05); /* Hover effect for scaling */
+    transform: scale(1.05);
 }
 
 .items-grid-container .item .name {
     line-height: 23px;
-    margin: 5px 0; /* Adjusted margin for spacing */
+    font-weight: 600;
+    margin: 5px 0;
 }
 
 .items-grid-container .img {
-    width: 100%; /* Full width */
-    height:300px; /* Increased height for the image */
+    width: 100%;
+    height:300px;
     display: flex;
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-    margin-bottom: 10px; /* Spacing below the image */
-    border-radius: 8px; /* Rounded corners for the image */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 8px;
 }
 
 .items-grid-container .img img {
-    width: 100%; /* Image covers the container */
-    height: 100%; /* Maintain the full height */
-    object-fit: cover; /* Maintain aspect ratio */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform .3s ease;
 }
 
@@ -218,7 +218,7 @@ a:hover {
     display: flex;
     align-items: center;
     column-gap: 4px;
-    margin: 0px 0 8px 0; /* Adjusted margin for spacing */
+    margin: 0px 0 8px 0;
 }
 
 .items-grid-container .item .rating>:nth-child(2) {
@@ -238,7 +238,7 @@ a:hover {
 
 .items-grid-container .item .price {
     font-weight: 600;
-    margin-bottom: 14px; /* Adjusted margin for spacing */
+    margin-bottom: 14px;
 }
 
 .add-to-cart-button-container {
@@ -260,7 +260,7 @@ a:hover {
 }
 .add-to-cart-button:hover {
     opacity: .6;
-    transform: scale(1.05); /* Hover effect for scaling */
+    transform: scale(1.05);
 }
 
 .clear-selection-one,
@@ -343,14 +343,6 @@ input {
 }
 
 @media (max-width: 768px) {
-    /* .filters {
-        display: none;
-    } */
-
-    /* body {
-        padding-left: 18px;
-        padding-right: 18px;
-    } */
 
     body{
         padding-left: 15px;
@@ -383,13 +375,13 @@ input {
 }
 @media (max-width: 532px) {
     .items-grid-container .item {
-        font-size: 16px; /* Maintain readability */
-        padding: 6px; /* Reduce padding for smaller screens */
-        height: auto; /* Allow height to adjust based on content */
+        font-size: 16px;
+        padding: 6px;
+        height: auto;
     }
 
     .items-grid-container .img {
-        height: 270px; /* Increased from 120px to 150px */
+        height: 270px;
     }
 }
 /* .menu-on-click{
